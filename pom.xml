@@ -22,6 +22,14 @@
       <name>Cloudera Repos</name>
       <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
     </repository>
+    <repository>
+      <id>cdh.repo</id>
+      <name>Cloudera Repositories</name>
+      <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>    
   </repositories>
 
   <pluginRepositories>
@@ -73,5 +81,10 @@
       <artifactId>spark-core_2.10</artifactId>
       <version>1.0.0-cdh5.1.0</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.kudu</groupId>
+      <artifactId>kudu-client</artifactId>
+      <version>0.5.0</version>
+    </dependency>    
   </dependencies>
 </project>
