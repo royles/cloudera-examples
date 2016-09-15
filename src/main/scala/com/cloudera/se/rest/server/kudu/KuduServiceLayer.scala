@@ -12,14 +12,16 @@ class KuduServiceLayer {
   @Path("/version")
   @Produces(Array(MediaType.TEXT_PLAIN))
   def version(): String = {
-    "Print Version"
+    "Kudu 0.10.0"
   }
   
   @GET
   @Path("/listTables")
   @Produces(Array(MediaType.TEXT_PLAIN))
   def listTables(): String = {
-    "List Tables"
+    
+    val listTablesResponse = KuduGlobalValues.kuduClient.getTablesList()
+    listTablesResponse
   }
   
   @GET
