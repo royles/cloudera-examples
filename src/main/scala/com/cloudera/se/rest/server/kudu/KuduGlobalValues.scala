@@ -1,5 +1,5 @@
 package com.cloudera.se.rest.server.kudu
-import org.apache.kudu.client.*
+import org.apache.kudu.client.KuduClient
 
 object KuduGlobalValues {
 
