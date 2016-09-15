@@ -11,21 +11,21 @@ class KuduServiceLayer {
   @GET
   @Path("/version")
   @Produces(Array(MediaType.TEXT_PLAIN))
-  def hello(): String = {
+  def version(): String = {
     "Print Version"
   }
   
   @GET
   @Path("/listTables")
   @Produces(Array(MediaType.TEXT_PLAIN))
-  def hello(): String = {
+  def listTables(): String = {
     "List Tables"
   }
   
   @GET
   @Path("/schema/{tableId}")
   @Produces(Array(MediaType.TEXT_PLAIN))
-  def hello(): String = {
+  def tableSchema(): String = {
     "Table xyz schema is"
   }    
 
