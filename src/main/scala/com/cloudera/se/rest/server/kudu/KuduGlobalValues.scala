@@ -3,16 +3,10 @@ import org.apache.kudu.client.KuduClient
 
 object KuduGlobalValues {
 
-  var tableName = "table"
   var kuduClient:KuduClient = null
 
-  def init(kuduMaster:String,
-           tableName:String): Unit = {
-
+  def init(kuduMaster:String): Unit = {
     println("kuduMaster:" + kuduMaster)
-    println("TableName:" + tableName)
-
     kuduClient = new KuduClient.KuduClientBuilder(kuduMaster).build()
-    this.tableName = tableName
   }
 }
