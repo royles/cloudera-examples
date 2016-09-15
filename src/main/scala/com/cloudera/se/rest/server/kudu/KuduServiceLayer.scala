@@ -18,7 +18,7 @@ class KuduServiceLayer {
   @GET
   @Path("/listTables")
   @Produces(Array(MediaType.TEXT_PLAIN))
-  def listTables(): List[String] = {
+  def listTables(): scala.collection.immutable.List[String] = {
     
     val listTablesResponse = KuduGlobalValues.kuduClient.getTablesList()
     listTablesResponse.getTablesList()
