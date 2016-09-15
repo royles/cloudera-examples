@@ -8,14 +8,13 @@ object KuduRestServer {
   def main(args:Array[String]): Unit = {
 
     if (args.length == 0) {
-      println("<port> <KuduMaster> <TableName>")
+      println("<port> <KuduMaster>")
     }
 
     val port = args(0).toInt
     val kuduMaster = args(1)
-    val tableName = args(2)
 
-    KuduGlobalValues.init(kuduMaster,tableName)
+    KuduGlobalValues.init(kuduMaster)
 
     val server = new Server(port)
 
