@@ -15,6 +15,7 @@ class KuduServiceLayer {
     "Hello World"
   }
 
+/**
   @GET
   @Path("{tableName}/{column}/{id}")
   @Produces(Array(MediaType.APPLICATION_JSON))
@@ -43,4 +44,6 @@ class KuduServiceLayer {
     }
     result
   }
+  **/
+  
 }
