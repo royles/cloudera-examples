@@ -1,11 +1,13 @@
-git clone <url>
+## A very basic REST service for KUDU
 
-mvn package
+* git clone <url>
+* mvn package
+* java -cp target/KuduRestServer.jar com.cloudera.se.rest.server.kudu.KuduRestServer 8055 <kudu master>:8051
 
-java -cp target/KuduRestServer.jar com.cloudera.se.rest.server.kudu.KuduRestServer 8055 <kudu master>:8051
+* KuduRestService <port> <Kudu Master>
 
-KuduRestService <port> <Kudu Master>
+* <port>        - The port that the Rest Server will start on
+* <Kudu Master> - The location of the Kudu Master Server
 
-<port>        - The port that the Rest Server will start on
-<Kudu Master> - The location of the Kudu Master Server
+* http://<machine on which service started>:8055/kudu/version
 
