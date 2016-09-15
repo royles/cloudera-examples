@@ -5,15 +5,29 @@ import javax.ws.rs.{QueryParam, _}
 import org.apache.kudu.client.KuduPredicate
 import scala.collection.mutable
 
-@Path("rest")
+@Path("/kudu")
 class KuduServiceLayer {
 
   @GET
-  @Path("hello")
+  @Path("/version")
   @Produces(Array(MediaType.TEXT_PLAIN))
   def hello(): String = {
-    "Hello World"
+    "Print Version"
   }
+  
+  @GET
+  @Path("/listTables")
+  @Produces(Array(MediaType.TEXT_PLAIN))
+  def hello(): String = {
+    "List Tables"
+  }
+  
+  @GET
+  @Path("/schema/{tableId}")
+  @Produces(Array(MediaType.TEXT_PLAIN))
+  def hello(): String = {
+    "Table xyz schema is"
+  }    
 
 /**
   @GET
