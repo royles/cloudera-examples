@@ -7,6 +7,7 @@
   <name>"Kudu REST Server"</name>
   
    <properties>
+        <target.jar>KuduRestServer.jar</target.jar>
         <spark.version>1.6.0-cdh5.8.1</spark.version>
         <scala.version>2.10.4</scala.version>
         <kafka.version>0.9.0-kafka-2.0.2</kafka.version>
@@ -278,7 +279,7 @@
                 <version>2.2</version>
                 <configuration>
                     <shadedArtifactAttached>false</shadedArtifactAttached>
-                    <outputFile>target/Taxi360.jar</outputFile>
+                    <outputFile>target/${target.jar}</outputFile>
                     <artifactSet>
                         <includes>
                             <include>*:*</include>
