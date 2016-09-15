@@ -10,14 +10,14 @@ class KuduServiceLayer {
 
   @GET
   @Path("/version")
-  @Produces("application/json")
+  @Produces(Array(MediaType.APPLICATION_JSON))
   def version(): String = {
     "Kudu 0.10.0"
   }
   
   @GET
   @Path("/listTables")
-  @Produces("application/json")
+  @Produces(Array(MediaType.APPLICATION_JSON))
   def listTables(): java.util.List[String] = {
     
     val listTablesResponse = KuduGlobalValues.kuduClient.getTablesList()
@@ -26,7 +26,7 @@ class KuduServiceLayer {
   
   @GET
   @Path("/schema/{tableId}")
-  @Produces("application/json")
+ @Produces(Array(MediaType.APPLICATION_JSON))
   def tableSchema(): String = {
     "Table xyz schema is"
   }    
